@@ -1,12 +1,9 @@
-# Renovation Brands · Diagnostic preview (CreditSwan)
+# Renovation Brands refresh (CreditSwan), static site
 
-Static, single-file site. No build step.
-
-Password-protected: the page content is AES-256 encrypted inside index.html and only decrypts in the browser with the password (Renovation2026). The password stays valid for the browser tab session.
+There is no build step. Everything the page needs is in this folder: index.html, fonts/, favicon.svg and vercel.json.
 
 Deploy:
-- Vercel dashboard: New Project → import this folder (Framework preset: Other, no build command, output directory `.`), or
-- CLI: `cd renovation-brands-diagnostic && npx vercel --prod`
+- Drag this folder onto vercel.com/new, or
+- run `npx vercel --prod` from inside this folder (framework: Other, no build command, output directory: .).
 
-`vercel.json` sets noindex headers so the preview stays out of search engines.
-Deep links work as `/#freight` or `/#freight/fr-economics`.
+The page is marked noindex. Add Vercel password protection if the link must stay private.
